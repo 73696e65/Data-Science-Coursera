@@ -14,7 +14,7 @@ emi_by_year <- tapply(ey$Emissions, ey$year, sum)
 plot(names(emi_by_year), 
         emi_by_year, 
         xlab = "Years", 
-        ylab = "Total emissions", 
+        ylab = "Total amount of PM2.5 emitted (tons)", 
         type = "o", 
         xaxt = 'n',
         col = "red",
