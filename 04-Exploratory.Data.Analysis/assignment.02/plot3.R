@@ -13,7 +13,7 @@ ey <- subset(NEI, fips == "24510", select = c(Emissions, year, type))
 emi_by_type_year <- aggregate(Emissions ~ year + type, data = ey, FUN = sum)
 
 ## Plot the data for each type
-p <- qplot(year, Emissions, data = emi_by_type_year, facets = ~ type, geom = c("point", "smooth"), method = "loess")
+p <- qplot(year, Emissions, data = emi_by_type_year, facets = ~ type, geom = c("point", "smooth"), method = "loess", xlab = "Years")
 print(p)
 
 ## Shut down the graphical device
