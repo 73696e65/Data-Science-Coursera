@@ -12,17 +12,17 @@ emi_by_year <- tapply(ey$Emissions, ey$year, sum)
 
 ## Plot without X axis 
 plot(names(emi_by_year), 
-     emi_by_year, 
-     xlab = "Years", 
-     ylab = "Total amount of PM2.5 emitted (tons)", 
-     type = "o", 
-     xaxt = 'n',
-     col = "red",
-     pch = 3
+        emi_by_year, 
+        xlab = "Years", 
+        ylab = "Total amount of PM2.5 emitted (tons)", 
+        type = "o", 
+        xaxt = 'n',
+        col = "red",
+        pch = 3
 )
 
 ## Add X axis for 1999, 2002, 2005, 2008
 axis(side = 1, at = names(emi_by_year))
 
-## Shut down graphical device
+## Shut down the graphical device
 dev.off()

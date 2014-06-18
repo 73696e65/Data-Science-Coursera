@@ -24,5 +24,5 @@ plot(names(emi_by_year),
 ## Add X axis for 1999, 2002, 2005, 2008
 axis(side = 1, at = names(emi_by_year))
 
-## Shut down graphical device
+## Shut down the graphical device
 dev.off()
